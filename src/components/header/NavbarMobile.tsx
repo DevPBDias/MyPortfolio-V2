@@ -42,6 +42,7 @@ function NavbarMobile({ open }: Props) {
   return (
     <NavBar open={ open }>
       <div>
+        <BtnNavbar route="" name="home" />
         <BtnNavbar route="about" name="About me" />
         <BtnNavbar route="skills" name="Skills" />
         <BtnNavbar route="projects" name="Projects" />
