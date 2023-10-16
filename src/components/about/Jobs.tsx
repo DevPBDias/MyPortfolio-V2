@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import JobCard from '../utils/JobCard';
+import { devices } from '../../data/mediaQueries';
 
 const ContainerJobs = styled.section`
     display: flex;
@@ -7,7 +8,7 @@ const ContainerJobs = styled.section`
     justify-content: center;
     align-items: center;
     justify-items: center;
-    width: 80%;
+    width: 100%;
     margin-top: 1em;
 
     h1 {
@@ -16,6 +17,12 @@ const ContainerJobs = styled.section`
         margin-right: auto;
         padding: 0 .5em;
     }
+
+    @media ${devices.landscapePhones} {
+      h1 {
+        font-size: 1.5rem;
+      }
+  }
 `;
 
 const ContainerCards = styled.div`
@@ -34,28 +41,20 @@ function Jobs() {
       <h1>Work Experience</h1>
       <ContainerCards>
         <JobCard
-          city="Goainia"
-          company="PRS e Foco Engenharia"
-          job="Engenheiro de avaliações de imoveis"
-          kind="Full time"
-          time="Ago 2014 - Jan 2015"
-          type="Presencial"
+          city="Palmas-TO"
+          company="Autônomo"
+          job="Freelancer"
+          kind="Meio período"
+          time="Abril 2023 - atual"
+          type="Online"
         />
         <JobCard
-          city="Goainia"
-          company="PRS e Foco Engenharia"
-          job="Engenheiro de avaliações de imoveis"
-          kind="Full time"
-          time="Ago 2014 - Jan 2015"
-          type="Presencial"
-        />
-        <JobCard
-          city="Goainia"
-          company="PRS e Foco Engenharia"
-          job="Engenheiro de avaliações de imoveis"
-          kind="Full time"
-          time="Ago 2014 - Jan 2015"
-          type="Presencial"
+          city="Palmas-TO"
+          company="Machado Construções e Avaliações"
+          job="Engenheiro de avaliações de imóveis"
+          kind="Meio período"
+          time="Out 2019 - atual"
+          type="Híbrido"
         />
       </ContainerCards>
     </ContainerJobs>

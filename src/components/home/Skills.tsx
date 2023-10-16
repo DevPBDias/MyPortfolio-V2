@@ -9,23 +9,25 @@ import github from '../../assets/icons/github-skills.png';
 import git from '../../assets/icons/git-skills.png';
 import styledComponents from '../../assets/icons/styled-skills.svg';
 import trello from '../../assets/icons/trello-skills.png';
+import { devices } from '../../data/mediaQueries';
 
 const ContainerSkills = styled.section`
-    margin-top: 2em;
+    margin-block: 10%;
     padding: 0.5em;
-    height: 100vh;
-
 
     h2 {
         font-size: 2rem;
         padding: 0.5em;
-
     }
 
     p {
         font-size: 1.2rem;
         padding: 0.5em;
     }
+
+    @media ${devices.landscapePhones} {
+    justify-content: space-between;
+  }
 `;
 
 const ContainerIcons = styled.div`
@@ -38,12 +40,21 @@ const ContainerIcons = styled.div`
     margin: auto;
     padding: 0.5em;
     margin-top: .5em;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
 
     img {
         width: 7em;
         height: 7em;
         margin: 1.5em;
     }
+
+    @media ${devices.landscapePhones} {
+      img {
+        width: 4em;
+        height: 4em;
+    }
+  }
 `;
 
 function Skills() {

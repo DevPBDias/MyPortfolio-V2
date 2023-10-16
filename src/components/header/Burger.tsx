@@ -11,22 +11,16 @@ const StyledBurger = styled.div<Props>`
   width: 1.5rem;
   height: 1.5rem;
   position: fixed;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 1.8em;
+  right: 2em;
   z-index: 98;
   display: none;
-  
-  @media ${devices.landscapePhones} {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-  }
   
   div {
     width: 1.5rem;
     height: 0.25rem;
     background-color: ${({ open }: any) => (open
-    ? 'var(--bg-burger)' : 'var(--bg-burger)')};
+    ? 'var(--bg-primary)' : 'var(--bg-primary)')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -43,6 +37,14 @@ const StyledBurger = styled.div<Props>`
     &:nth-child(3) {
       transform: ${({ open }: any) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
+  }
+
+  @media ${devices.landscapePhones} {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    top: 2em;
+    right: 5em;
   }
 `;
 

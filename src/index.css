@@ -5,10 +5,10 @@
     --notebook: 1200px;
     --deskotop: 1400px;
     --hover-orange:  #FF6224;
-    --text-color-white: #EBE4DE;
-    --bg-brown: #260A00;
-    --bg-primary: #191919;
-    --bg-burger: #fff;
+    --text-color-white: #edebe6;
+    --bg-primary: #403b33;
+    --header-footer: #94c7b6;
+    --bg-secondary: #d6e1c7;
   } 
   
   * {
@@ -17,11 +17,12 @@
     box-sizing: border-box;
     color: var(--text-color-white);
     text-decoration: none;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-family: 'Poppins', sans-serif;
 }
 
 body {
+    position: relative;
     text-align: center;
     margin: 0;
     padding: 0;

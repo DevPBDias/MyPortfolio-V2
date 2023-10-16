@@ -27,30 +27,56 @@ const NavBar = styled.nav<Props>`
     justify-items: center;
     align-items: center;
     position: fixed;
+    background-color: var(--header-footer);
     transform: ${({ open }: any) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: 0;
     right: 0;
     height: 100vh;
-    width: 60vw;
+    width: 70%;
     padding-top: 3.5em;
     transition: transform 0.4s ease-in-out;
     gap: .8em;
+
+    .containerLinks {
+      height: 45vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .containerIcons {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      justify-items: center;
+      align-items: center;
+    }
   }
 `;
 
 function NavbarMobile({ open }: Props) {
   return (
     <NavBar open={ open }>
-      <div>
+      <div className="containerLinks">
         <BtnNavbar route="" name="home" />
         <BtnNavbar route="about" name="About me" />
         <BtnNavbar route="skills" name="Skills" />
         <BtnNavbar route="projects" name="Projects" />
         <BtnNavbar route="contact" name="Contact me" />
       </div>
-      <div>
-        <IconNavbar name="linkedin" image={ linkedinLogo } />
-        <IconNavbar name="github" image={ githubLogo } />
+      <div className="containerIcons">
+        <IconNavbar
+          url="https://www.linkedin.com/in/devpaulobrunomdias/"
+          name="linkedin"
+          image={ linkedinLogo }
+        />
+        <IconNavbar
+          url="https://github.com/DevPBDias"
+          name="github"
+          image={ githubLogo }
+        />
       </div>
     </NavBar>
   );

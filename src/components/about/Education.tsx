@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import EducationCard from '../utils/EducationCard';
+import { devices } from '../../data/mediaQueries';
 
 const ContainerEducation = styled.section`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-items: center;
-    width: 80%;
+    width: 100%;
     margin-top: 1em;
 
     h1 {
@@ -15,6 +16,12 @@ const ContainerEducation = styled.section`
         margin-right: auto;
         padding: 0 .5em;
     }
+
+    @media ${devices.landscapePhones} {
+      h1 {
+        font-size: 1.5rem;
+      }
+  }
 `;
 
 const ContainerCards = styled.div`
@@ -34,15 +41,15 @@ function Education() {
       <ContainerCards>
         <EducationCard
           course="Engenharia civil"
-          school="Engenheiro de avaliações de imoveis"
-          kind="Full time"
+          school="PUC-Goiás"
+          kind="Integral"
           time="Ago 2012 - Jan 2017"
           type="Presencial"
         />
         <EducationCard
           course="Desenvolvedor Web Full Stack"
           school="Trybe"
-          kind="Half time"
+          kind="Meio período"
           time="Jan 2022 - Mar 2023"
           type="Online"
         />

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logo from '../../assets/images/ideia.png';
+import { devices } from '../../data/mediaQueries';
 
 const ContainerLogo = styled.picture`
   width: 4em;
@@ -8,6 +9,10 @@ const ContainerLogo = styled.picture`
   img {
     width: 4em;
     height: 4em;
+  }
+
+  @media ${devices.landscapePhones} {
+    margin-left: 2em;
   }
 `;
 

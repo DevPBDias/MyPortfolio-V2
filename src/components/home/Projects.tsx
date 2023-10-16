@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ProjectCard from '../utils/ProjectCard';
 import project from '../../assets/images/project.png';
+import { devices } from '../../data/mediaQueries';
 
 const ContainerProjects = styled.div`
     margin-top: 2em;
@@ -27,6 +28,10 @@ const ContainerCards = styled.div`
     margin: auto;
     padding: 0.5em;
     margin-top: .5em;
+
+    @media ${devices.landscapePhones} {
+      width: 100%;
+    }
 `;
 
 function Projects() {
@@ -41,7 +46,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
         <ProjectCard
           description="This is sample project description random things
@@ -49,7 +57,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
         <ProjectCard
           description="This is sample project description random things
@@ -57,7 +68,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
         <ProjectCard
           description="This is sample project description random things
@@ -65,7 +79,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
         <ProjectCard
           description="This is sample project description random things
@@ -73,7 +90,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
         <ProjectCard
           description="This is sample project description random things
@@ -81,7 +101,10 @@ function Projects() {
           image={ project }
           name="Project Name"
           stacks="Tech stack : HTML , JavaScript, SASS, React"
-          nameButton="Live Preview"
+          nameButtonOne="View project"
+          nameButtonTwo="View code"
+          urlGithub="https://github.com/DevPBDias"
+          urlProject="https://www.olemidia.com.br/"
         />
       </ContainerCards>
     </ContainerProjects>

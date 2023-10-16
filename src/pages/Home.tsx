@@ -1,16 +1,12 @@
-import styled from 'styled-components';
 import Presentation from '../components/home/Presentation';
 import myPhoto from '../assets/images/my-photo.png';
 import Skills from '../components/home/Skills';
 import Projects from '../components/home/Projects';
-
-const ContainerHome = styled.main`
-    padding: 0 5% ;
-`;
+import Footer from '../components/footer/Footer';
 
 function Home() {
   return (
-    <ContainerHome>
+    <main>
       <Presentation
         title="Hi, my name is"
         name="Paulo Bruno"
@@ -19,7 +15,8 @@ function Home() {
       />
       <Skills />
       <Projects />
-    </ContainerHome>
+      <Footer />
+    </main>
   );
 }
 

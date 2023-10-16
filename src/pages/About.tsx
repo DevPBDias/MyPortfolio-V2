@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ContentText from '../components/about/ContentText';
 import Jobs from '../components/about/Jobs';
 import Education from '../components/about/Education';
+import { devices } from '../data/mediaQueries';
 
 const ContainerAbout = styled.section`
     display: flex;
@@ -9,20 +10,28 @@ const ContainerAbout = styled.section`
     justify-content: space-between;
     justify-items: center;
     align-items: center;
+    margin: 5em auto 2em auto;
+
+    .content {
+      margin: auto;
+      width: 80%;
+    }
+
+    @media ${devices.mobile} {
+      .content {
+      width: 100%;
+    }
+    }
 `;
 
 function About() {
   return (
     <ContainerAbout>
-      <ContentText
-        title="About me"
-        message="The Generator App is an online tool that helps you to
-        export ready-made templates ready to work as your future website.
-        It helps you to combine slides, panels and other components and
-        export it as a set of static files: HTML/CSS/JS."
-      />
-      <Jobs />
-      <Education />
+      <div className="content">
+        <ContentText />
+        <Jobs />
+        <Education />
+      </div>
     </ContainerAbout>
   );
 }

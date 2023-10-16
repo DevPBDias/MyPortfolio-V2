@@ -11,6 +11,7 @@ import styledComponents from '../assets/icons/styled-skills.svg';
 import trello from '../assets/icons/trello-skills.png';
 import sass from '../assets/icons/sass-skills.png';
 import html from '../assets/icons/html-skills.png';
+import { devices } from '../data/mediaQueries';
 
 const ContainerSkills = styled.section`
     display: flex;
@@ -20,12 +21,13 @@ const ContainerSkills = styled.section`
     margin: 1em auto;
     padding: 0.5em;
     width: 80%;
+    margin: 5em auto 0 auto;
     
     h2 {
         text-align: left;
-        font-size: 2rem;
-        padding: 0.5em;
         width: 100%;
+        padding: 0.5em;
+        font-size: 2rem;
 
     }
 
@@ -40,7 +42,7 @@ const ContainerSkills = styled.section`
 const ContainerIcons = styled.div`
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
     width: 80%;
@@ -53,6 +55,15 @@ const ContainerIcons = styled.div`
         height: 5em;
         margin: 1.5em;
     }
+
+    @media ${devices.mobile} {
+    width: 100%;
+
+    img {
+        width: 3em;
+        height: 3em;
+    }
+  }
 `;
 
 function Skills() {

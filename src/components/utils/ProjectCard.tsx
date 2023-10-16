@@ -1,12 +1,15 @@
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { devices } from '../../data/mediaQueries';
 
 type IProjectCardProps = {
   image: string,
   name: string,
   description: string,
   stacks: string,
-  nameButton: string,
+  nameButtonOne: string,
+  nameButtonTwo: string,
+  urlProject: string,
+  urlGithub: string,
 };
 
 const ContentCard = styled.div`
@@ -19,24 +22,45 @@ const ContentCard = styled.div`
     height: 25em;
     margin: 1em;
     border-radius: 16px;
+    background-color: var(--bg-secondary);
     
     img {
-        width: 100%;
+      width: 100%;
     }
     
     h4 {
+      color: var(--bg-primary);
         padding-inline: .5em;
         font-size: 1rem;
     }
 
     p {
+      color: var(--bg-primary);
         font-size: .8rem;
         padding-inline: .5em;
+        text-align: center;
+    }
+
+    small {
+      color: var(--bg-primary);
+        font-size: .7rem;
+        padding-inline: .5em;
+    }
+
+    @media ${devices.landscapePhones} {
+    h4 {
+        padding-inline: .3em;
+    }
+
+    p {
+        font-size: .7rem;
+        padding-inline: .2em;
     }
 
     small {
         font-size: .7rem;
-        padding-inline: .5em;
+        padding-inline: .2em;
+    }
     }
 `;
 
@@ -47,20 +71,24 @@ const ContainerBtns = styled.div`
     justify-items: center;
     align-items: center;
     width: 100%;
+    
 
-    button {
+    a {
         width: 8em;
-        background-color: var(--bg-primary);
-        color: var(--text-color-white);
         font-size: .7rem;
         padding: .4em;
+        margin-bottom: .5em;
+        background-color: var(--bg-secondary);
+        border: none;
+        text-decoration: underline;
+        color: var(--bg-primary);
     }
 
 `;
 
 function ProjectCard(props: IProjectCardProps) {
-  const { image, name, description, stacks, nameButton } = props;
-  const navigate = useNavigate();
+  const { image, name, description, stacks, nameButtonOne,
+    nameButtonTwo, urlProject, urlGithub } = props;
 
   return (
     <ContentCard>
@@ -69,18 +97,16 @@ function ProjectCard(props: IProjectCardProps) {
       <p>{description}</p>
       <small>{stacks}</small>
       <ContainerBtns>
-        <button
-          type="button"
-          onClick={ () => navigate('') }
+        <a
+          href={ `${urlProject}` }
         >
-          {nameButton}
-        </button>
-        <button
-          type="button"
-          onClick={ () => navigate('') }
+          {nameButtonOne}
+        </a>
+        <a
+          href={ `${urlGithub}` }
         >
-          {nameButton}
-        </button>
+          {nameButtonTwo}
+        </a>
       </ContainerBtns>
     </ContentCard>
   );

@@ -3,15 +3,27 @@ import styled from 'styled-components';
 type IconProps = {
   image: string,
   name: string,
+  url: string,
 };
 
-const IconNav = styled.img`
-    margin-inline: 0.5em;
+const LinkIcon = styled.a`
+  padding: 0.5em;
 `;
 
-function IconNavbar({ image, name }: IconProps) {
+const IconNav = styled.img`
+  width: 30px;
+  height: 30px;
+`;
+
+function IconNavbar({ image, name, url }: IconProps) {
   return (
-    <IconNav src={ image } alt={ name } className="icon-navbar" />
+    <LinkIcon href={ `${url}` }>
+      <IconNav
+        src={ image }
+        alt={ name }
+        className="icon-navbar"
+      />
+    </LinkIcon>
   );
 }
 

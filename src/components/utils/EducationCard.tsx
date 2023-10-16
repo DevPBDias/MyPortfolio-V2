@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../data/mediaQueries';
 
 type ICardProps = {
   school: string,
@@ -15,6 +16,7 @@ const ContainerCard = styled.div`
     justify-items: center;
     width: 100%;
     padding: 0.5em;
+    border-bottom: 1px solid gray;
 
     div { 
         display: flex;
@@ -33,14 +35,29 @@ const ContainerCard = styled.div`
     small {
         font-size: .8rem;
         background-color: var(--hover-orange);
-        border-radius: 16px;
-        padding: 0.2em;
+        border-radius: 8px;
+        padding: 0.4em;
+        font-weight: 500;
     }
 
     p {
         font-size: 1rem;
         width: 30%;
     }
+
+    @media ${devices.landscapePhones} {
+      p {
+        font-size: .8rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    small {
+        font-size: .6rem;
+    }
+  }
 `;
 
 function EducationCard({ school, course, kind, time, type }: ICardProps) {
