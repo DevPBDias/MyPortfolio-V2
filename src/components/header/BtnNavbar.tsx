@@ -22,7 +22,7 @@ const Btn = styled.button`
     }
 
     @media ${devices.landscapePhones} {
-      font-size: .8rem;
+      font-size: 1rem;
   }
 `;
 

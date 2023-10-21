@@ -47,8 +47,8 @@ const ContainerCards = styled.div`
 function Projects() {
   return (
     <ContainerProjects>
-      <h2>My Projects</h2>
-      <p>Things I’ve built so far</p>
+      <h2>Meus projetos</h2>
+      <p>Projetos que eu desenvolvi até o momento :</p>
       <ContainerCards>
         <Freelancer />
         <TrybeProjects />

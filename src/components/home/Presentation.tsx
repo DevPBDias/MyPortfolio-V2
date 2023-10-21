@@ -12,18 +12,26 @@ const Content = styled.section`
     text-align: left;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
     height: calc(100vh - 82px);
-    width: 100%;
+    padding-top: 8%;
 
-    div {
-        width: 60%;
+    .text-home {
+        width: 50%;
         display: flex;
         flex-flow: column nowrap;
         justify-items: center;
         align-items: center;
-        margin-top: calc(82px + 1em);
       }
+
+    .img-home {
+        width: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-items: center;
+        align-items: center;
+    }
 
     h1 {
         font-size: 2rem;
@@ -49,8 +57,10 @@ const Content = styled.section`
     }
 
     img {
-        width: 350px;
-        height: 350px;
+        border: 4px solid var(--hover-orange);
+        border-radius: 100%;
+        width: 600px;
+        height: 650px;
         margin: auto;
     }
 
@@ -77,19 +87,37 @@ const Content = styled.section`
         line-height: 2rem;
     }
 
-      div {
+    .text-home {
         width: 100%;
-        display: flex;
-        flex-flow: row nowrap;
-        margin-top: calc(82px + 1em);
-      }
+        padding-block: 2em;
+    }
+
+    .img-home {
+        width: 100%;
+        padding-block: 2em;
+    }
+
+      img {
+        width: 400px;
+        height: 450px;
+    }
 
     }
     
     @media ${devices.mobile} {
+      .text-home {
+        width: 100%;
+        margin-block: 2em;
+    }
+
+    .img-home {
+        width: 100%;
+        margin-block: 2em;
+    }
+
       img {
         width: 250px;
-        height: 250px;
+        height: 300px;
       }
     }
 
@@ -98,7 +126,7 @@ const Content = styled.section`
 function Presentation({ title, subtitle, name, photo }:IPresentationProps) {
   return (
     <Content>
-      <div>
+      <div className="text-home">
         <h1>
           { title }
           <br />
@@ -107,7 +135,9 @@ function Presentation({ title, subtitle, name, photo }:IPresentationProps) {
           <small>{subtitle}</small>
         </h1>
       </div>
-      <img src={ photo } alt="dev-img" />
+      <div className="img-home">
+        <img src={ photo } alt="dev-img" />
+      </div>
     </Content>
   );
 }

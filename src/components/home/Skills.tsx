@@ -1,18 +1,18 @@
 import styled from 'styled-components';
-import ts from '../../assets/icons/ts-skills.png';
-import js from '../../assets/icons/js-skills.png';
-import css from '../../assets/icons/css-skills.png';
-import react from '../../assets/icons/react-skills.png';
-import tailwind from '../../assets/icons/tailwind-skills.png';
-import vscode from '../../assets/icons/vscode-skills.png';
-import github from '../../assets/icons/github-skills.png';
-import git from '../../assets/icons/git-skills.png';
+import ts from '../../assets/icons/ts-skills.webp';
+import js from '../../assets/icons/js-skills.webp';
+import css from '../../assets/icons/css-skills.webp';
+import react from '../../assets/icons/react-skills.webp';
+import tailwind from '../../assets/icons/tailwind-skills.webp';
+import vscode from '../../assets/icons/vscode-skills.webp';
+import github from '../../assets/icons/github-skills.webp';
+import git from '../../assets/icons/git-skills.webp';
 import styledComponents from '../../assets/icons/styled-skills.svg';
-import trello from '../../assets/icons/trello-skills.png';
+import trello from '../../assets/icons/trello-skills.webp';
 import { devices } from '../../data/mediaQueries';
 
 const ContainerSkills = styled.section`
-    margin-block: 10%;
+    margin-block: 5%;
     padding: 0.5em;
 
     h2 {

@@ -11,7 +11,7 @@ const ContainerContact = styled.section`
     align-items: center;
     margin: 4em 0 0 0;
     padding: 2em;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 195px);
 
     p {
       font-size: 3rem;
@@ -43,7 +43,7 @@ function Contact() {
   return (
     <>
       <ContainerContact>
-        <Text message="For any questions please mail me:" />
+        <Text message="Para qualquer tipo de dúvidas entre em contato:" />
         <Email>devpbdias@gmail.com</Email>
       </ContainerContact>
       <Footer />

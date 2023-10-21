@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import BtnNavbar from '../header/BtnNavbar';
 import IconNavbar from '../header/IconNavbar';
 import MyLogo from '../my-logo/MyLogo';
-import linkedinLogo from '../../assets/icons/linkedin.png';
-import githubLogo from '../../assets/icons/github.png';
+import linkedinLogo from '../../assets/icons/linkedin.webp';
+import githubLogo from '../../assets/icons/github.webp';
 import { devices } from '../../data/mediaQueries';
 
 const FooterBar = styled.footer`

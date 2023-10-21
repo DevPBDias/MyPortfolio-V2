@@ -24,8 +24,10 @@ const ContentCard = styled.div`
     border-radius: 16px;
     background-color: var(--bg-secondary);
     
-    img {
+    .imgProject {
+      border-radius: 16px 16px 0 0;
       width: 100%;
+      height: 180px;
     }
     
     h4 {
@@ -34,9 +36,9 @@ const ContentCard = styled.div`
         font-size: 1rem;
     }
 
-    p {
+    .text {
       color: var(--bg-primary);
-        font-size: .8rem;
+        font-size: .7rem;
         padding-inline: .5em;
         text-align: center;
     }
@@ -52,7 +54,7 @@ const ContentCard = styled.div`
         padding-inline: .3em;
     }
 
-    p {
+    .text {
         font-size: .7rem;
         padding-inline: .2em;
     }
@@ -92,18 +94,22 @@ function ProjectCard(props: IProjectCardProps) {
 
   return (
     <ContentCard>
-      <img src={ image } alt={ name } />
+      <img className="imgProject" src={ image } alt={ name } />
       <h4>{name}</h4>
-      <p>{description}</p>
+      <p className="text">{description}</p>
       <small>{stacks}</small>
       <ContainerBtns>
         <a
           href={ `${urlProject}` }
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {nameButtonOne}
         </a>
         <a
           href={ `${urlGithub}` }
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {nameButtonTwo}
         </a>

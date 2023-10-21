@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import ts from '../assets/icons/ts-skills.png';
-import js from '../assets/icons/js-skills.png';
-import css from '../assets/icons/css-skills.png';
-import react from '../assets/icons/react-skills.png';
-import tailwind from '../assets/icons/tailwind-skills.png';
-import vscode from '../assets/icons/vscode-skills.png';
-import github from '../assets/icons/github-skills.png';
-import git from '../assets/icons/git-skills.png';
+import ts from '../assets/icons/ts-skills.webp';
+import js from '../assets/icons/js-skills.webp';
+import css from '../assets/icons/css-skills.webp';
+import react from '../assets/icons/react-skills.webp';
+import tailwind from '../assets/icons/tailwind-skills.webp';
+import vscode from '../assets/icons/vscode-skills.webp';
+import github from '../assets/icons/github-skills.webp';
+import git from '../assets/icons/git-skills.webp';
 import styledComponents from '../assets/icons/styled-skills.svg';
-import trello from '../assets/icons/trello-skills.png';
-import sass from '../assets/icons/sass-skills.png';
-import html from '../assets/icons/html-skills.png';
+import trello from '../assets/icons/trello-skills.webp';
+import sass from '../assets/icons/sass-skills.webp';
+import html from '../assets/icons/html-skills.webp';
 import { devices } from '../data/mediaQueries';
 
 const ContainerSkills = styled.section`
@@ -48,7 +48,7 @@ const ContainerIcons = styled.div`
     width: 80%;
     margin: auto;
     padding: 0.5em;
-    margin-top: .5em;
+    margin-block: 1.5em;
 
     img {
         width: 5em;
@@ -69,8 +69,8 @@ const ContainerIcons = styled.div`
 function Skills() {
   return (
     <ContainerSkills>
-      <h2>My Tech Stack</h2>
-      <p> Technologies I’ve been working with recently</p>
+      <h2>Minhas Habilidades</h2>
+      <p>Tecnologias que eu venho trabalhando ultimamente :</p>
       <ContainerIcons>
         <img src={ ts } alt="ts-skills" />
         <img src={ js } alt="js-skills" />
@@ -84,7 +84,7 @@ function Skills() {
         <img src={ vscode } alt="vscode-skills" />
         <img src={ trello } alt="trello-skills" />
       </ContainerIcons>
-      <p> Technologies I’ve been learning recently</p>
+      <p>Próximo tecnologia a ser aprendida :</p>
       <ContainerIcons>
         <img src={ sass } alt="sass-skills" />
       </ContainerIcons>

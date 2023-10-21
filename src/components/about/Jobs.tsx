@@ -38,7 +38,7 @@ const ContainerCards = styled.div`
 function Jobs() {
   return (
     <ContainerJobs>
-      <h1>Work Experience</h1>
+      <h1>Experiência</h1>
       <ContainerCards>
         <JobCard
           city="Palmas-TO"

@@ -37,21 +37,21 @@ const ContainerCards = styled.div`
 function Education() {
   return (
     <ContainerEducation>
-      <h1>Education</h1>
+      <h1>Formação acadêmica</h1>
       <ContainerCards>
-        <EducationCard
-          course="Engenharia civil"
-          school="PUC-Goiás"
-          kind="Integral"
-          time="Ago 2012 - Jan 2017"
-          type="Presencial"
-        />
         <EducationCard
           course="Desenvolvedor Web Full Stack"
           school="Trybe"
           kind="Meio período"
           time="Jan 2022 - Mar 2023"
           type="Online"
+        />
+        <EducationCard
+          course="Engenharia civil"
+          school="PUC-Goiás"
+          kind="Integral"
+          time="Ago 2012 - Jan 2017"
+          type="Presencial"
         />
       </ContainerCards>
     </ContainerEducation>

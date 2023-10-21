@@ -40,7 +40,7 @@ const ContainerText = styled.section`
 function ContentText() {
   return (
     <ContainerText>
-      <h1>About me</h1>
+      <h1>Sobre mim</h1>
       <p>
         Sou desenvolvedor front-end, formado pela Trybe.
         Durante minha jornada como aluno, aprendi diversos conhecimentos para

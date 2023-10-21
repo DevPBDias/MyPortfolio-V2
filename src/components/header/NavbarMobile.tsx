@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import BtnNavbar from './BtnNavbar';
 import IconNavbar from './IconNavbar';
-import linkedinLogo from '../../assets/icons/linkedin.png';
-import githubLogo from '../../assets/icons/github.png';
+import linkedinLogo from '../../assets/icons/linkedin.webp';
+import githubLogo from '../../assets/icons/github.webp';
 import { devices } from '../../data/mediaQueries';
 
 type Props = {
@@ -61,10 +61,10 @@ function NavbarMobile({ open }: Props) {
     <NavBar open={ open }>
       <div className="containerLinks">
         <BtnNavbar route="" name="home" />
-        <BtnNavbar route="about" name="About me" />
-        <BtnNavbar route="skills" name="Skills" />
-        <BtnNavbar route="projects" name="Projects" />
-        <BtnNavbar route="contact" name="Contact me" />
+        <BtnNavbar route="about" name="sobre mim" />
+        <BtnNavbar route="skills" name="habilidades" />
+        <BtnNavbar route="projects" name="projetos" />
+        <BtnNavbar route="contact" name="Contato" />
       </div>
       <div className="containerIcons">
         <IconNavbar

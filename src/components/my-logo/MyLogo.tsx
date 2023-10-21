@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import logo from '../../assets/images/ideia.png';
+import logo from '../../assets/images/logo.webp';
 import { devices } from '../../data/mediaQueries';
 
 const ContainerLogo = styled.picture`
-  width: 4em;
   height: 4em;
 
   img {
-    width: 4em;
     height: 4em;
   }
 
